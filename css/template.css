@@ -15,12 +15,33 @@
 html,
 body,
 #wrap {
+
+    /* Reset de formulários */
+input,
+button {
+    font-family: inherit;
+    font-size: inherit;
+    padding: .5rem .75rem;
+    border: none;
+}
+
     /* Reset dos elementos raiz */
     position: relative;
     width: 100%;
     height: 100%;
     padding: 0%;
     margin: 0%;
+}
+
+/* Reset dos links */
+a {
+    text-decoration: none;
+    color: steelblue;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(255, 0, 0);
 }
 
 html,
@@ -42,6 +63,16 @@ body {
     max-width: 1024px;/* Largura máxima → 1080px - barra de rolagem */
     min-width: 280px; /* Largura mínima → 320px - barra de rolagem */
     margin: auto;/* Bloco centralizado */
+    margin: auto; /*stick footer*/
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Estiliza filhos de #wrap */
+#wrap>header,#wrap>nav,#wrap>footer{
+    margin: .25rem;
+    border-radius: .5rem;
 }
 
 /*********************
@@ -50,8 +81,8 @@ body {
 
  #wrap>header {
     background-color: steelblue;
-    margin: .25rem;
-    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 #wrap>header>a {
@@ -151,3 +182,128 @@ body {
     font-size: 1.2rem;
     text-transform: uppercase;
 }
+
+/****************************
+ ***** Template central *****
+ ****************************/
+
+ #wrap>main {
+    color: inherit;
+}
+
+#wrap>main>article {
+    background-color: white;
+    padding: 1rem;
+}
+
+#wrap>main>article>h2:first-child,
+#wrap>main>aside>h3:first-child {
+    margin: 0;
+}
+
+#wrap>main>aside {
+    background-color: rgb(238, 238, 238);
+    padding: 1rem;
+}
+
+/******************
+ ***** Rodapé *****
+ ******************/
+
+#wrap > footer {
+    background-color: rgb(0, 0, 0);
+    color: white;
+} 
+
+#wrap>footer a {
+    color: rgb(255, 255, 255);
+}
+
+#wrap>footer:hover {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+}
+
+.footer_top a i {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.footer_top div {
+    font-size: small;
+}
+
+.footer_botton {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+.footer_botton nav {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.7;
+}
+
+.footer_botton nav h4 {
+    margin: 0;
+}
+
+.footer_botton nav a {
+    margin-left: 1rem;
+}
+
+#fotrack {
+    height: .1rem;
+}
+
+/********************************************
+ ***** Resoluções de 640 pixels ou mais *****
+ ***** Usando Media Queries             *****
+ ********************************************/
+
+ @media screen and (min-width: 575px) {
+
+    /* altera o cabeçalho */
+    #wrap>header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Altera o menu */
+    #wrap>nav a {
+        flex-direction: row;
+        
+    }
+
+    #wrap>nav a i {
+        font-size: 1.2rem;
+        margin: 0 .35rem 0 0;
+    }
+}
+
+@media screen and (min-width: 640px) {
+
+    #wrap>main {
+        flex-direction: row;
+    }
+
+    #wrap>main>aside {
+        min-width: 12.5rem;
+        max-width: 12.5rem;
+    }
+    
+}
+
+@media screen and (min-width: 570px) {
+    #wrap>main {
+        flex-direction: row;
+    }
+
+    #wrap>main>aside {
+        min-width: 13.0rem;
+        max-width: 13.0rem;
+    }
+
+} 
