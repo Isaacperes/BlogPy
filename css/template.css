@@ -16,14 +16,14 @@ html,
 body,
 #wrap {
 
-    /* Reset de formulários */
+   /* Reset de formulários */
 input,
+textarea,
 button {
     font-family: inherit;
     font-size: inherit;
-    padding: .5rem .75rem;
-    border: none;
 }
+
 
     /* Reset dos elementos raiz */
     position: relative;
