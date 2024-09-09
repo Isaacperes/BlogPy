@@ -1,86 +1,71 @@
-/* Carrega a fonte "Roboto" do google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/* Carrega a biblioteca de ícones */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
-
-/* Reset para que o CSS seja o mesmo em todos os navegadores modernos */
-
-* {
-    /* Reset das caixas */
-    box-sizing: border-box;
-    outline: none;
-}
 
 html,
 body,
 #wrap {
-
-   /* Reset de formulários */
-input,
-textarea,
-button {
-    font-family: inherit;
-    font-size: inherit;
-}
-
-
-    /* Reset dos elementos raiz */
     position: relative;
     width: 100%;
     height: 100%;
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
 }
 
-/* Reset dos links */
+input,
+button {
+    font-family: inherit;
+    font-size: inherit;
+    padding: .5rem .75rem;
+    border: none;
+}
+
+
+
+
 a {
     text-decoration: none;
-    color: steelblue;
+    color: rgb(255, 0, 0);
 }
 
 a:hover {
     text-decoration: underline;
-    color: rgb(255, 0, 0);
+    color: rgb(111, 0, 255);
 }
 
 html,
 body {
-    /* Fonte padrão do site */
     font-family: Roboto, sans-serif;
-    /* Tamanho da fonte padrão > 16px > 1rem */
     font-size: 16px;
 }
 
 body {
-    /* Fundo da página */
-    background-color: rgb(196, 202, 216);
-    background-image: url('/images/snakebg2.png');
+    background-image: url('/images/fundo6.png');
+    /* Substitua pelo caminho da sua imagem */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
 }
 
 #wrap {
-    max-width: 1024px;/* Largura máxima → 1080px - barra de rolagem */
-    min-width: 280px; /* Largura mínima → 320px - barra de rolagem */
-    margin: auto;/* Bloco centralizado */
-    margin: auto; /*stick footer*/
+    max-width: 1024px;
+    /* min-width: 280px; */
+    margin: auto;
+    margin: auto;
     display: flex;
     flex-direction: column;
 }
 
-
-/* Estiliza filhos de #wrap */
-#wrap>header,#wrap>nav,#wrap>footer{
+#wrap>header,
+#wrap>nav,
+#wrap>footer {
     margin: .25rem;
     border-radius: .5rem;
 }
 
-/*********************
- ***** Cabeçalho *****
- *********************/
-
- #wrap>header {
-    background-color: steelblue;
+#wrap>header {
+    background-color: rgb(43, 119, 170);
     display: flex;
     flex-direction: column;
 }
@@ -89,35 +74,34 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 #wrap>header img {
     display: block;
     height: 5rem;
-    margin: .25rem 1rem .25rem .5rem;
+    /* margin: 1.25rem .5rem .25rem .5rem; */
 }
 
 #wrap>header h1 {
     margin: 0;
-    font-size: 2.5rem;
-    letter-spacing: .25rem;
+    font-size: 1.5rem;
+    /* letter-spacing: .25rem; */
     text-align: center;
-    /* Experimental */
-    -webkit-text-stroke: 1px white;
+
+    -webkit-text-stroke: .25px rgb(255, 255, 255);
 }
 
 #wrap>header small {
     display: block;
-    font-size: .72rem;
+    font-size: 1rem;
     letter-spacing: normal;
     font-weight: normal;
-    color: white;
-    /* Experimental */
+    color: rgb(255, 255, 255);
+
     -webkit-text-stroke: 0;
 }
 
-/* Formulário de busca no header */
 #wrap>header form {
     display: flex;
     padding: 1rem;
@@ -126,12 +110,12 @@ body {
 #wrap>header form input {
     width: 100%;
     border-radius: .3rem 0 0 .3rem;
-    background-color: white;
+    background-color: rgb(103, 232, 255);
 }
 
 #wrap>header form button {
     border-radius: 0 .3rem .3rem 0;
-    background-color: white;
+    background-color: rgb(0, 183, 255);
     padding-left: .25rem;
     padding-right: .25rem;
 }
@@ -141,12 +125,9 @@ body {
     cursor: pointer;
 }
 
-/*************************
- ***** Menu Prinipal *****
- *************************/
 
 #wrap>nav {
-    background-color: black;
+    background-color: rgb(0, 153, 255);
     margin: .25rem;
     border-radius: .5rem;
     display: flex;
@@ -155,7 +136,7 @@ body {
 }
 
 #wrap>nav a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -168,7 +149,7 @@ body {
     color: rgb(255, 0, 0);
 }
 
-/* Link de Início */
+
 #wrap>nav a:first-child {
     margin-right: auto;
 }
@@ -183,17 +164,18 @@ body {
     text-transform: uppercase;
 }
 
-/****************************
- ***** Template central *****
- ****************************/
 
- #wrap>main {
-    color: inherit;
+#wrap>main {
+    display: flex;
+    flex-direction: column;
 }
 
-#wrap>main>article {
-    background-color: white;
+#wrap>main>article,
+#wrap>main>aside {
+    background-color: rgb(255, 255, 255);
     padding: 1rem;
+    margin: .25rem;
+    border-radius: .3rem;
 }
 
 #wrap>main>article>h2:first-child,
@@ -202,18 +184,15 @@ body {
 }
 
 #wrap>main>aside {
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(255, 68, 68);
     padding: 1rem;
 }
 
-/******************
- ***** Rodapé *****
- ******************/
 
-#wrap > footer {
+#wrap>footer {
     background-color: rgb(0, 0, 0);
     color: white;
-} 
+}
 
 #wrap>footer a {
     color: rgb(255, 255, 255);
@@ -257,24 +236,19 @@ body {
     height: .1rem;
 }
 
-/********************************************
- ***** Resoluções de 640 pixels ou mais *****
- ***** Usando Media Queries             *****
- ********************************************/
+@media screen and (min-width: 575px) {
 
- @media screen and (min-width: 575px) {
 
-    /* altera o cabeçalho */
     #wrap>header {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
 
-    /* Altera o menu */
+
     #wrap>nav a {
         flex-direction: row;
-        
+
     }
 
     #wrap>nav a i {
@@ -293,28 +267,5 @@ body {
         min-width: 12.5rem;
         max-width: 12.5rem;
     }
-    
-}
 
-@media screen and (min-width: 570px) {
-    #wrap>main {
-        flex-direction: row;
-    }
-
-    #wrap>main>aside {
-        min-width: 13.0rem;
-        max-width: 13.0rem;
-    }
-
-} 
-/********************************
- ***** Estilos de uso geral *****
- ********************************/
-
-.center {
-    text-align: center;
-}
-
-.red {
-    color: red;
 }

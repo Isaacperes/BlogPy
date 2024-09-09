@@ -45,7 +45,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-   
+
 }
 
 #wrap {
@@ -170,7 +170,8 @@ body {
     flex-direction: column;
 }
 
-#wrap>main>article,#wrap>main>aside {
+#wrap>main>article,
+#wrap>main>aside {
     background-color: rgb(255, 255, 255);
     padding: 1rem;
     margin: .25rem;
@@ -183,15 +184,15 @@ body {
 }
 
 #wrap>main>aside {
-    background-color: rgb(173, 173, 173);
+    background-color: rgb(139, 92, 248);
     padding: 1rem;
 }
 
 
-#wrap > footer {
+#wrap>footer {
     background-color: rgb(0, 0, 0);
     color: white;
-} 
+}
 
 #wrap>footer a {
     color: rgb(255, 255, 255);
@@ -237,17 +238,17 @@ body {
 
 @media screen and (min-width: 575px) {
 
-    
+
     #wrap>header {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
 
-    
+
     #wrap>nav a {
         flex-direction: row;
-        
+
     }
 
     #wrap>nav a i {
@@ -266,5 +267,5 @@ body {
         min-width: 12.5rem;
         max-width: 12.5rem;
     }
-    
+
 }
