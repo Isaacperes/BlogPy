@@ -110,7 +110,7 @@ body {
 #wrap>header form input {
     width: 100%;
     border-radius: .3rem 0 0 .3rem;
-    background-color: rgb(103, 232, 255);
+    background-color: rgb(106, 233, 255);
 }
 
 #wrap>header form button {
@@ -178,13 +178,17 @@ body {
     border-radius: .3rem;
 }
 
+#wrap>main>article {
+    flex-grow: 1;
+}
+
 #wrap>main>article>h2:first-child,
 #wrap>main>aside>h3:first-child {
     margin: 0;
 }
 
 #wrap>main>aside {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(44, 241, 255);
     padding: 1rem;
 }
 
@@ -201,6 +205,12 @@ body {
 #wrap>footer:hover {
     color: rgb(255, 0, 0);
     text-decoration: none;
+}
+
+.footer_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .footer_top a i {

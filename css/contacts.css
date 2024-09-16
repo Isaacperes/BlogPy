@@ -1,30 +1,34 @@
-main label {
+#contact form {
+    background-color: aquamarine;
+}
+
+#contact label {
     display: block;
     padding: 0 0 .5rem .25rem;
 }
 
-main input,
-main textarea,
-main button {
+#contact input,
+#contact textarea,
+#contact button {
     padding: .5rem;
     border-radius: .3rem;
 }
 
-main input,
-main textarea {
-   width: 100%;
-   border: 1px solid red;
-   border-bottom: 2px solid red;
-   border-right: 2px solid red; 
-   background-color: rgb(255, 240, 240);
+#contact input,
+#contact textarea {
+    width: 96%;
+    border: 1px solid red;
+    border-bottom: 2px solid red;
+    border-right: 2px solid red;
+    background-color: rgb(255, 240, 240);
 }
 
-main textarea {
+#contact textarea {
     height: 6rem;
     resize: vertical;
 }
 
-main button {
+#contact button {
     border: none;
     background-color: gray;
     color: white;
@@ -33,20 +37,20 @@ main button {
     pointer-events: none;
 }
 
-main input:valid,
-main textarea:valid {
+#contact input:valid,
+#contact textarea:valid {
     border: 1px solid green;
     border-bottom: 2px solid green;
-    border-right: 2px solid green; 
+    border-right: 2px solid green;
     background-color: rgb(232, 240, 254);
 }
 
-main form:valid button {
+#contact form:valid button {
     background-color: steelblue;
     pointer-events: all;
     cursor: pointer;
 }
 
-main form small {
+#contact form small {
     color: grey;
 }
